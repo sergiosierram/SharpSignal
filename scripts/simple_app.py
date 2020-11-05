@@ -39,16 +39,20 @@ class SimpleApp(EWrapper, EClient):
 def main():
     # Instanciamos nuestra app
     app = SimpleApp('127.0.0.1', 7497, 0)
-    # Solicitamos el tiempo
-    app.reqCurrentTime()
-    # Esperamos a que sea procesada la solicitud
-    time.sleep(0.5)
+    # Solicitamos el tiempo 10 veces
+    count = 0
+    while (count < 10):
+        app.reqCurrentTime()
+        # Esperamos a que sea procesada la solicitud
+        time.sleep(1)
+        count += 1
     # Terminamos la conexion con TWS
     app.disconnect()
 
 if __name__ == '__main__':
     try:
         main()
-    except:
-        print("Something expected just occurred!")
+    except Exception as e:
+        print("Something unexpected just occurred!")
+        print(e)
 
