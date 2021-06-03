@@ -5,4 +5,4 @@ Cada estrategia se compone como mínimo de un **main.py**, el cual contiene la d
 
 Las siguientes estrategias pueden encontrarse en este directorio:
 
-* [s2_correlation101](https://github.com/sergiosierram/SharpSignal/tree/main/qc_projects/s2_correlation101): Es una estrategia basada en la construcción de un _Mega Alpha_, a partir de los [101 Alphas](https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf) publicados por Zura Kakushadze. Este _Mega Alpha_ es construido a partir de la ponderación de la ponderación de los _n_ alphas que presentan mejor correlación con los retornos del mercado.
+* [s2_correlation101](https://github.com/sergiosierram/SharpSignal/tree/main/qc_projects/s2_correlation101): Es una estrategia basada en la construcción de un _Mega Alpha_, a partir de los [101 Alphas](https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf) publicados por Zura Kakushadze. Este _Mega Alpha_ es construido a partir de la ponderación de los _n_ alphas que presentan mejor correlación con los retornos del mercado.
