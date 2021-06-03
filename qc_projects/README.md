@@ -1,0 +1,8 @@
+# Quantconnect Projects
+En este directorio se encuentran los códigos fuente de las estrategias implementadas en la plataforma de [Quantconnet](https://www.quantconnect.com/), bajo el paradigma de programación de [Algorithm Framework](https://www.quantconnect.com/docs/algorithm-framework/overview). 
+
+Cada estrategia se compone como mínimo de un **main.py**, el cual contiene la definición de la clase **QCAlgorithm** encargada de integrar los 5 módulos principales del [Algorithm Framework](https://www.quantconnect.com/docs/algorithm-framework/overview) (i.e., [Universe Selection](https://www.quantconnect.com/docs/algorithm-framework/universe-selection), [Alpha Creation](https://www.quantconnect.com/docs/algorithm-framework/alpha-creation), [Portfolio Construction](https://www.quantconnect.com/docs/algorithm-framework/portfolio-construction), [Execution](https://www.quantconnect.com/docs/algorithm-framework/execution), y [Risk Management](https://www.quantconnect.com/docs/algorithm-framework/risk-management)).
+
+Las siguientes estrategias pueden encontrarse en este directorio:
+
+* (s2_correlation101)[https://github.com/sergiosierram/SharpSignal/tree/main/qc_projects/s2_correlation101]: Es una estrategia basada en la construcción de un __Mega Alpha__, a partir de los (101 Alphas)[https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf] publicados por Zura Kakushadze. Este __Mega Alpha__ es construido a partir de la ponderación de la ponderación de los __n__ alphas que presentan mejor correlación con los retornos del mercado.
