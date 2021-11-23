@@ -73,10 +73,11 @@ class CasualFluorescentYellowCaterpillar(QCAlgorithm):
             while top_idx < self.topx:
                 try:
                     symbol = data[idx]['symbol']+'USD'
-                    dataSymbol = self.AddCrypto(symbol, self.resolution, Market.Bitfinex)
-                    dataSymbol.SetFeeModel(CustomFeeModel(self))
-                    self.symbols.append(symbol)
-                    top_idx += 1
+                    if symbol != "USDTUSD" and symbol != "USDCUSD" and symbol != "BUSDUSD":
+                        dataSymbol = self.AddCrypto(symbol, self.resolution, Market.Bitfinex)
+                        dataSymbol.SetFeeModel(CustomFeeModel(self))
+                        self.symbols.append(symbol)
+                        top_idx += 1
                     idx += 1
                 except:
                     idx += 1
