@@ -11,7 +11,7 @@ class CasualFluorescentYellowCaterpillar(QCAlgorithm):
     Stop loss size parameter defines the amount of the crypto that will be liquidate when it falls 
     Stop loss freq parameter defines how frequently each crypto is monitored.
 
-    If you want to disable stop loss behavior, just set stop loss parameter greater than 1.
+    If you want to disable stop loss behavior, just set stop loss freq parameter greater than 66.
 
     To modify the start date or "phase" use the offset parameter to define how many hours should the
     algorithm wait to begin.

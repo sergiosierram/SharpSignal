@@ -38,6 +38,7 @@ class CasualFluorescentYellowCaterpillar(QCAlgorithm):
         self.window = int(self.GetParameter("window"))
         self.rebalance = int(self.GetParameter("rebalance"))
         self.topx = int(self.GetParameter("topx"))
+        self.allocation = float(self.GetParameter("allocation"))
         self.t_count = -1       #This counter is for rebalancing purposes   
         self.week_count = 0     #This counter is for indexing the dataset
         self.symbols = []
@@ -178,7 +179,7 @@ class CasualFluorescentYellowCaterpillar(QCAlgorithm):
             if not self.use_last:
                 self.SetHoldings(currency, w[i])
             else:
-                targets.append(PortfolioTarget(currency, 0.7*w[i]))
+                targets.append(PortfolioTarget(currency, self.allocation*w[i]))
         if self.use_last:
             self.SetHoldings(targets)
         return
